@@ -1,5 +1,6 @@
 <?php
 
+// запуск: php sortfigures.php
 include 'bootstrap.php';
 
 $figuresFactory = new FiguresFactory();

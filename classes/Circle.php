@@ -35,6 +35,6 @@ class Circle extends Figures
      */
     public function getArea(): int
     {
-        return $this->radius * $this->radius * self::PI;
+        return round($this->radius * $this->radius * self::PI);
     }
 }
