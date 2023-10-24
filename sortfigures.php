@@ -1,11 +1,6 @@
 <?php
 
 include 'bootstrap.php';
-//include 'classes/Figures.php';
-//include 'classes/Circle.php';
-//include 'classes/Rectangle.php';
-//include 'classes/FiguresFactory.php';
-//include 'classes/SortFiguresByAreaHandler.php';
 
 $figuresFactory = new FiguresFactory();
 
