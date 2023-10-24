@@ -24,11 +24,6 @@ class Circle extends Figures
         $this->radius = $radius;
     }
 
-    public function getName()
-    {
-        return $this->name;
-    }
-
     /**
      * площадь круга
      * @return int
