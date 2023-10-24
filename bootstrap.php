@@ -1,20 +1,17 @@
 <?php
 
-spl_autoload_register( 'my_psr4_autoloader' );
+spl_autoload_register( 'psr4_autoloader' );
 
 /**
- * An example of a project-specific implementation.
  *
- * @param string $class The fully-qualified class name.
+ * @param string $class
  * @return void
  */
-function my_psr4_autoloader($class) {
-    // replace namespace separators with directory separators in the relative
-    // class name, append with .php
+function psr4_autoloader($class) {
     $class_path = str_replace('\\', '/', $class);
 
     $file =  'classes/' . $class_path . '.php';
-    // if the file exists, require it
+
     if (file_exists($file)) {
         require $file;
     }
