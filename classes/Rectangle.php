@@ -1,36 +1,26 @@
 <?php
 
-namespace App;
-
-use App\Figures;
-use http\Encoding\Stream;
-
 class Rectangle extends Figures
 {
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
-     * @var float
+     * @var int
      */
     private $width;
 
     /**
-     * @var float
+     * @var int
      */
     private $height;
 
     /**
-     * @var float
-     */
-    private $area;
-
-    /**
      * @param string $name
-     * @param float $width
-     * @param float $height
+     * @param int $width
+     * @param int $height
      */
     public function __construct($name, $width, $height)
     {
@@ -38,8 +28,13 @@ class Rectangle extends Figures
         $this->width = $width;
         $this->height = $height;
     }
-    public function getArea()
+
+    /**
+     * площадь прямоугольника
+     * @return int
+     */
+    public function getArea(): int
     {
-        $this->area = $this->width * $this->width;
+        return $this->width * $this->height;
     }
 }

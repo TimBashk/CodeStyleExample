@@ -1,9 +1,5 @@
 <?php
 
-namespace App;
-
-use App\Figures;
-
 class Circle extends Figures
 {
     const PI = 3.14;
@@ -11,7 +7,7 @@ class Circle extends Figures
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @var float
@@ -19,13 +15,8 @@ class Circle extends Figures
     private $radius;
 
     /**
-     * @var float
-     */
-    private $area;
-
-    /**
      * @param string $name
-     * @param float $radius
+     * @param int $radius
      */
     public function __construct($name, $radius)
     {
@@ -33,8 +24,17 @@ class Circle extends Figures
         $this->radius = $radius;
     }
 
-    public function getArea()
+    public function getName()
     {
-        $this->area = $this->radius * $this->radius * self::PI;
+        return $this->name;
+    }
+
+    /**
+     * площадь круга
+     * @return int
+     */
+    public function getArea(): int
+    {
+        return $this->radius * $this->radius * self::PI;
     }
 }
